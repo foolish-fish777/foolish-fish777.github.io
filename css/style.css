@@ -322,6 +322,12 @@ address {
   margin: 0.1rem 0;
 }
 
+.site-footer .visit-note {
+  margin-top: 0.65rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
 .site-footer a {
   color: inherit;
 }
