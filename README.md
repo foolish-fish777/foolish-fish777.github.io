@@ -1,6 +1,6 @@
 # foolish-fish777.github.io
 
-sumiger.me 的静态站点，由 GitHub Pages 从本仓库发布。这里是个人独立开发者孙明威（Sumiger）的应用介绍和隐私政策。页面是纯静态 HTML 和一份共享 CSS，没有统计、Cookie 横幅或第三方追踪。
+sumiger.me 的静态站点，由 GitHub Pages 从本仓库发布。这里是个人独立开发者孙明威（Sumiger）的应用介绍和隐私政策。页面是纯静态 HTML、一份共享 CSS，以及 `/js/visit.js`。本站会记录访客的 IP 地址和访问时间，用于统计访问次数。没有 Cookie 横幅。
 
 ## 发布方式
 
@@ -30,7 +30,7 @@ GitHub Pages 按目录里的 `index.html` 提供页面，因此带末尾斜杠�
 2. 需要介绍页时，新增 `/apps/<slug>/index.html`。
 3. 在首页 `index.html` 的「应用」列表，以及 `/privacy/index.html`，加上相对链接。
 4. 隐私政策只写该应用实际的做法，不要编造收集项。
-5. 不要加入统计、广告脚本、Cookie 横幅、付费外链服务或第三方追踪。不要改动 `CNAME`。
+5. 访问记录只使用 `/js/visit.js`。不要在仓库或这个文件里加入统计令牌、密码或密钥。不要加入广告脚本、Cookie 横幅、付费外链服务或其他追踪。不要改动 `CNAME`。
 
 ## 本地预览
 
