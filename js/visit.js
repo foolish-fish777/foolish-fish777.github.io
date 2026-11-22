@@ -1,9 +1,10 @@
-/* Visit logger for sumiger.me — v2 (no heatmap / no screen recording).
-   Sends one collect call per page view, plus one engagement call on leave.
+/* Visit logger for sumiger.me — v3 (no heatmap / no screen recording).
+   Sends one collect call per page view, plus one engagement call on leave,
+   plus one type=download call when a download link is clicked.
    Safe no-op if the API is unreachable. Do not add a stats token here.
-   NOTE: the Azure /api/collect backend currently only stores
-   IP + time + path. The extra fields below are sent, but will only
-   appear on the stats page after the backend is updated to store them. */
+   NOTE: only clicks on the site's own pages are tracked. A download opened
+   by pasting the file URL directly (or by curl) never runs this script,
+   so it is not counted. */
 (function () {
   var COLLECT_URL = "https://func-sumiger-analytics.azurewebsites.net/api/collect";
   var startTime = Date.now();
@@ -69,8 +70,41 @@
     };
   }
 
+  // Download tracking: a click on a file link (.app / .apk / .hap, or any
+  // link with a download attribute) sends one type=download event with the
+  // file name, before the browser starts the download. sendBeacon keeps
+  // working even as the page unloads for the download.
+  function isDownloadLink(a) {
+    if (!a || !a.href) return false;
+    if (a.hasAttribute && a.hasAttribute("download")) return true;
+    try {
+      var p = new URL(a.href, location.href).pathname.toLowerCase();
+      return p.endsWith(".app") || p.endsWith(".apk") || p.endsWith(".hap")
+        || p.endsWith(".zip") || p.endsWith(".dmg") || p.endsWith(".exe");
+    } catch (e) {
+      return false;
+    }
+  }
+
   try {
-    document.addEventListener("click", function () { clicks++; }, true);
+    document.addEventListener("click", function (ev) {
+      clicks++;
+      var t = ev && ev.target;
+      var a = null;
+      if (t) {
+        if (t.closest) a = t.closest("a");
+        else if (t.tagName === "A") a = t;
+      }
+      if (isDownloadLink(a)) {
+        try {
+          var file = new URL(a.href, location.href).pathname;
+          var f = baseFields();
+          f.type = "download";
+          f.file = file;
+          send(f);
+        } catch (e) {}
+      }
+    }, true);
     window.addEventListener("scroll", function () {
       var h = document.documentElement.scrollHeight - window.innerHeight;
       var pct = h > 0 ? Math.round((window.scrollY / h) * 100) : 100;
