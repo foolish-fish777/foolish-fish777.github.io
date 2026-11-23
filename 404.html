@@ -4,37 +4,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <title>页面未找到 — Sumiger</title>
-  <meta name="description" content="没有找到这个页面。">
+  <title data-i18n="nf_metaTitle">页面未找到 — Sumiger</title>
+  <meta name="description" data-i18n-attr="content:nf_metaDesc" content="没有找到这个页面。">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <a class="skip" href="#main">跳到主要内容</a>
+  <a class="skip" href="#main" data-i18n="common_skip">跳到主要内容</a>
   <header class="site-header">
     <div class="wrap bar">
       <a class="brand" href="/">Sumiger</a>
-      <nav class="site-nav" aria-label="站点">
-        <a href="/privacy/">隐私政策</a>
+      <nav class="site-nav" aria-label="站点" data-i18n-attr="aria-label:common_navLabel">
+        <a href="/privacy/" data-i18n="common_navPrivacy">隐私政策</a>
+        <label class="lang-switch"><span class="visually-hidden" data-i18n="common_langLabel">语言</span><select id="lang-select" data-i18n-attr="aria-label:common_langLabel" aria-label="语言"><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="yue">廣東話</option><option value="en">English</option></select></label>
       </nav>
     </div>
   </header>
   <main id="main" tabindex="-1">
     <div class="wrap">
       <div class="page-head">
-        <h1>页面未找到</h1>
+        <h1 data-i18n="nf_h1">页面未找到</h1>
         <p class="en" lang="en">Not Found</p>
       </div>
-      <p>没有与这个地址对应的页面。</p>
+      <p data-i18n="nf_p">没有与这个地址对应的页面。</p>
       <ul class="index-list">
         <li>
           <a href="/">
-            <span class="item-title">返回首页</span>
+            <span class="item-title" data-i18n="nf_home">返回首页</span>
             <span class="item-note">Sumiger</span>
           </a>
         </li>
         <li>
           <a href="/privacy/">
-            <span class="item-title">隐私政策</span>
+            <span class="item-title" data-i18n="common_navPrivacy">隐私政策</span>
             <span class="item-note" lang="en">Privacy</span>
           </a>
         </li>
@@ -45,9 +46,10 @@
     <div class="wrap">
       <p>孙明威 / Sumiger</p>
       <p><a href="mailto:MAXschedule@outlook.com">MAXschedule@outlook.com</a></p>
-      <p class="visit-note">本站会记录访客的 IP 地址和访问时间，用于统计访问次数。</p>
+      <p class="visit-note" data-i18n="common_visitNote">本站会记录访客的 IP 地址和访问时间，用于统计访问次数。</p>
     </div>
   </footer>
+  <script src="/js/i18n.js" defer></script>
   <script src="/js/visit.js" defer></script>
 </body>
 </html>

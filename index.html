@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <title>Sumiger</title>
-  <meta name="description" content="孙明威（Sumiger）的个人站点，列出独立开发的应用与隐私政策。">
+  <title data-i18n="home_metaTitle">Sumiger</title>
+  <meta name="description" data-i18n-attr="content:home_metaDesc" content="孙明威（Sumiger）的个人站点，列出独立开发的应用与隐私政策。">
   <link rel="canonical" href="https://sumiger.me/">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip" href="#main">跳到主要内容</a>
+  <a class="skip" href="#main" data-i18n="common_skip">跳到主要内容</a>
   <header class="site-header">
     <div class="wrap bar">
       <a class="brand" href="./" aria-current="page">Sumiger</a>
-      <nav class="site-nav" aria-label="站点">
-        <a href="privacy/">隐私政策</a>
+      <nav class="site-nav" aria-label="站点" data-i18n-attr="aria-label:common_navLabel">
+        <a href="privacy/" data-i18n="common_navPrivacy">隐私政策</a>
+        <label class="lang-switch"><span class="visually-hidden" data-i18n="common_langLabel">语言</span><select id="lang-select" data-i18n-attr="aria-label:common_langLabel" aria-label="语言"><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="yue">廣東話</option><option value="en">English</option></select></label>
       </nav>
     </div>
   </header>
@@ -23,27 +24,27 @@
     <div class="wrap">
       <div class="page-head">
         <h1>Sumiger</h1>
-        <p class="lede">个人独立开发者</p>
+        <p class="lede" data-i18n="home_lede">个人独立开发者</p>
       </div>
 
       <section aria-labelledby="apps-title">
-        <h2 id="apps-title">应用</h2>
+        <h2 id="apps-title" data-i18n="home_appsTitle">应用</h2>
         <ul class="index-list">
           <li>
             <a href="apps/max-timetable/">
-              <span class="item-title">MAX课程表</span>
-              <span class="item-note">本地课程表</span>
+              <span class="item-title" data-i18n="home_appTitle">MAX课程表</span>
+              <span class="item-note" data-i18n="home_appNote">本地课程表</span>
             </a>
           </li>
         </ul>
       </section>
 
       <section aria-labelledby="privacy-title">
-        <h2 id="privacy-title">隐私政策</h2>
+        <h2 id="privacy-title" data-i18n="common_navPrivacy">隐私政策</h2>
         <ul class="index-list">
           <li>
             <a href="privacy/">
-              <span class="item-title">隐私政策</span>
+              <span class="item-title" data-i18n="common_navPrivacy">隐私政策</span>
               <span class="item-note" lang="en">Privacy</span>
             </a>
           </li>
@@ -55,9 +56,10 @@
     <div class="wrap">
       <p>孙明威 / Sumiger</p>
       <p><a href="mailto:MAXschedule@outlook.com">MAXschedule@outlook.com</a></p>
-      <p class="visit-note">本站会记录访客的 IP 地址和访问时间，用于统计访问次数。</p>
+      <p class="visit-note" data-i18n="common_visitNote">本站会记录访客的 IP 地址和访问时间，用于统计访问次数。</p>
     </div>
   </footer>
+  <script src="/js/i18n.js" defer></script>
   <script src="/js/visit.js" defer></script>
 </body>
 </html>

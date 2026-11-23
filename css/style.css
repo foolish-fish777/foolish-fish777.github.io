@@ -98,7 +98,33 @@ main:focus {
 
 .site-nav {
   display: flex;
+  align-items: center;
   gap: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+}
+
+.lang-switch select {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.4rem;
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
 }
 
 .brand:hover,
