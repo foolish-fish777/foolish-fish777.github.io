@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title data-i18n="wata_metaTitle">渡边记账 — Sumiger</title>
+  <meta name="description" data-i18n-attr="content:wata_metaDesc" content="渡边记账是一款本地记账工具，用于手动记账、按日查看收支，以及收支趋势与分类统计。数据默认只保存在您的设备上，不绑定微信、支付宝账号。">
+  <link rel="canonical" href="https://sumiger.me/apps/watanabe-bookkeeping/">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="common_skip">跳到主要内容</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="../../">Sumiger</a>
+      <nav class="site-nav" aria-label="站点" data-i18n-attr="aria-label:common_navLabel">
+        <a href="../../privacy/" data-i18n="common_navPrivacy">隐私政策</a>
+        <label class="lang-switch"><span class="visually-hidden" data-i18n="common_langLabel">语言</span><select id="lang-select" data-i18n-attr="aria-label:common_langLabel" aria-label="语言"><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="yue">廣東話</option><option value="en">English</option><option value="wuu">上海闲话</option><option value="tairu">泰如方言</option><option value="ja">日本語</option><option value="ko">한국어</option></select></label>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap">
+      <header class="page-head">
+        <h1 data-i18n="wata_h1">渡边记账</h1>
+        <p class="en" lang="en">Local bookkeeping</p>
+        <p class="dates">
+          <span data-i18n="app_devLine">开发者 孙明威 / Sumiger</span>
+        </p>
+      </header>
+      <p data-i18n="wata_intro">渡边记账是一款本地记账工具，用于手动记账、按日查看收支，以及收支趋势与分类统计。账本、分类和偏好默认只保存在您的设备上，不会上传到开发者自有服务器做账号同步。应用没有账号，也不需要登录，不绑定微信、支付宝账号。</p>
+      <h2 data-i18n="wata_authorTitle">作者寄语</h2>
+      <p data-i18n="wata_authorText">渡边是日本的一个大姓，在日本社会深陷通缩时，出现了一群“渡边太太”。因国情不同，我们无法像“渡边太太”那样开源，但我们可以用渡边记账来节流。</p>
+      <h2 data-i18n="wata_featTitle">功能</h2>
+      <ul>
+        <li data-i18n-html="wata_featHome"><strong>首页：</strong>左右滑切换列表和日历。列表按日期分组，顶部可换月份，显示当月收入、支出和余额；日历按天显示结余，正数为绿色、负数为红色，点某天看当天明细。右下角加号可记一笔：金额、收/支、分类、商户/对方、备注、支付方式。</li>
+        <li data-i18n-html="wata_featCharts"><strong>图表：</strong>顶部切换饼状图和折线图，两张图都能切换支出和收入。饼状图按分类显示占比和金额；折线图显示按日趋势，下面是日期、收入、支出、结余的表，带总计行。</li>
+        <li data-i18n-html="wata_featSettings"><strong>设置：</strong>作者寄语、联系方式、隐私政策和开发者个人网站。联系方式：<a href="mailto:MAXschedule@outlook.com">MAXschedule@outlook.com</a>。</li>
+      </ul>
+      <h2 data-i18n="wata_expTitle">实验功能（默认关闭）</h2>
+      <p data-i18n="wata_expIntro">以下两个功能是实验性的，默认关闭，打开后也只把结果放进“待确认”，由您逐条核对金额、改好分类，点“保存入账”才会写入账本。可能会漏记、错记，随时可能下线。</p>
+      <ul>
+        <li data-i18n-html="wata_expImport"><strong>账单导入：</strong>您自己从微信、支付宝官方入口导出账单文件（.csv），再分享给应用解析。微信账单只能导出最近三个月。解析结果去重后进“待确认”，不自动入账。</li>
+        <li data-i18n-html="wata_expListener"><strong>通知监听（仅安卓）：</strong>只读微信和支付宝的支付通知，在本机解析金额和商户名，不存通知原文，验证码一律丢弃。需要在系统设置里由您亲自授予“通知使用权”，应用不能自己授权。</li>
+      </ul>
+      <p data-i18n="wata_notDo">不做：月预算、绑定微信/支付宝账号实时同步、读屏增强、截图识别、云同步、社区分享、图片上传。</p>
+      <h2 data-i18n="wata_dlTitle">下载</h2>
+      <p data-i18n="wata_dlText">暂未发布。安卓版第一版源码已完成，正在测试，暂无安装包。发布后会在这里更新下载链接。</p>
+      <h2 data-i18n="wata_privTitle">隐私</h2>
+      <p data-i18n="wata_privText">账本数据只存在您的设备上。实验功能打开前会再弹一次确认，说明读什么、存哪、怎么关；关闭后立即停止读取，已入账的不受影响。识别记录只留最近 24 小时、最多 50 条，可一键清除。完整隐私政策见应用内的隐私政策页。</p>
+      <ul class="index-list">
+        <li>
+          <a href="../../privacy/">
+            <span class="item-title" data-i18n="common_navPrivacy">隐私政策</span>
+            <span class="item-note" lang="en">Privacy</span>
+          </a>
+        </li>
+      </ul>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>孙明威 / Sumiger</p>
+      <p><a href="mailto:MAXschedule@outlook.com">MAXschedule@outlook.com</a></p>
+      <p class="visit-note" data-i18n="common_visitNote">本站会记录访客的 IP 地址和访问时间，用于统计访问次数。</p>
+    </div>
+  </footer>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/visit.js" defer></script>
+</body>
+</html>
