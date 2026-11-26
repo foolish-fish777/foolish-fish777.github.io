@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title data-i18n="forum_metaTitle">匿名讨论区 — Sumiger</title>
+  <meta name="description" data-i18n-attr="content:forum_metaDesc" content="匿名讨论区：不用登录，直接发帖，自动获得一个匿名编号。">
+  <link rel="canonical" href="https://sumiger.me/forum/">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .post-form textarea {
+      width: 100%;
+      min-height: 6rem;
+      font: inherit;
+      line-height: 1.6;
+      padding: 0.6rem 0.7rem;
+      background: var(--bg);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 0.4rem;
+      resize: vertical;
+    }
+    .post-form button {
+      font: inherit;
+      padding: 0.5rem 1.1rem;
+      margin-top: 0.6rem;
+      background: var(--link);
+      color: #fff;
+      border: 0;
+      border-radius: 0.4rem;
+      cursor: pointer;
+    }
+    .post-form button:disabled {
+      opacity: 0.55;
+      cursor: default;
+    }
+    .post-status {
+      min-height: 1.5em;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .post-item p {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      margin: 0.35rem 0 0;
+    }
+    .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1rem;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    .post-del {
+      padding: 0;
+      background: none;
+      border: 0;
+      color: var(--muted);
+      font: inherit;
+      font-size: 0.875rem;
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="common_skip">跳到主要内容</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="../">Sumiger</a>
+      <nav class="site-nav" aria-label="站点" data-i18n-attr="aria-label:common_navLabel">
+        <a href="../privacy/" data-i18n="common_navPrivacy">隐私政策</a>
+        <label class="lang-switch"><span class="visually-hidden" data-i18n="common_langLabel">语言</span><select id="lang-select" data-i18n-attr="aria-label:common_langLabel" aria-label="语言"><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="yue">廣東話</option><option value="en">English</option><option value="wuu">上海闲话</option><option value="tairu">泰如方言</option><option value="ja">日本語</option><option value="ko">한국어</option></select></label>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap">
+      <header class="page-head">
+        <h1 data-i18n="forum_h1">匿名讨论区</h1>
+        <p class="lede" data-i18n="forum_lede">不用登录，直接发帖。第一次发帖时会自动给你一个匿名编号，存在你自己的浏览器里。</p>
+        <p class="lede" data-i18n="forum_rules">请勿发布广告、违法内容；违规帖子会被管理员删除。</p>
+        <p class="lede"><span data-i18n="forum_yourId">你的匿名编号是</span> <strong id="anon-name"></strong></p>
+      </header>
+
+      <section aria-labelledby="post-title">
+        <h2 id="post-title" data-i18n="forum_postBtn">发帖</h2>
+        <form class="post-form" id="post-form">
+          <label class="visually-hidden" for="post-text" data-i18n="forum_postBtn">发帖</label>
+          <textarea id="post-text" maxlength="1000" data-i18n-attr="placeholder:forum_placeholder" placeholder="写点什么…（最多 1000 字）"></textarea>
+          <button type="submit" id="post-btn" data-i18n="forum_postBtn">发帖</button>
+        </form>
+        <p class="post-status" id="post-status" aria-live="polite"></p>
+        <p class="post-status" id="offline-note" data-i18n="forum_offline" hidden>讨论区后端正在接通中，暂时发不了帖子，稍后再来。</p>
+      </section>
+
+      <section aria-labelledby="list-title">
+        <h2 id="list-title" data-i18n="forum_h1">匿名讨论区</h2>
+        <p class="post-status" id="list-status" data-i18n="forum_loading">加载中…</p>
+        <ul class="blocks" id="post-list"></ul>
+        <p id="empty-note" data-i18n="forum_empty" hidden>还没有帖子，来发第一条吧。</p>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>孙明威 / Sumiger</p>
+      <p><a href="mailto:MAXschedule@outlook.com">MAXschedule@outlook.com</a></p>
+      <p class="visit-note" data-i18n="common_visitNote">本站会记录访客的 IP 地址和访问时间，用于统计访问次数。</p>
+    </div>
+  </footer>
+  <script src="/js/i18n.js" defer></script>
+  <script src="forum.js" defer></script>
+</body>
+</html>
