@@ -47,6 +47,8 @@
     "forum_offline": "讨论区后端正在接通中，暂时发不了帖子，稍后再来。",
     "home_forumTitle": "匿名讨论区",
     "home_forumNote": "匿名发帖",
+    "forum_blocked": "地区不适配",
+    "forum_backHome": "返回首页",
 
     "app_metaTitle": "MAX课程表 — Sumiger",
     "app_metaDesc": "MAX课程表是一款本地课程表工具，用于每日与每周排课、作息设置，以及主题和会员。",
@@ -359,6 +361,8 @@
     "forum_offline": "討論區後端正在接通中，暫時發不了帖子，稍後再來。",
     "home_forumTitle": "匿名討論區",
     "home_forumNote": "匿名發帖",
+    "forum_blocked": "地區不適配",
+    "forum_backHome": "返回首頁",
 
     "app_metaTitle": "MAX課程表 — Sumiger",
     "app_metaDesc": "MAX課程表是一款本地課程表工具，用於每日與每週排課、作息設定，以及主題和會員。",
@@ -671,6 +675,8 @@
     "forum_offline": "討論區後端接緊線，暫時發唔到帖，遲啲再嚟。",
     "home_forumTitle": "匿名討論區",
     "home_forumNote": "匿名發帖",
+    "forum_blocked": "地區唔適配",
+    "forum_backHome": "返去首頁",
 
     "app_metaTitle": "MAX課程表 — Sumiger",
     "app_metaDesc": "MAX課程表係一個本地課程表工具，用嚟排每日同每星期嘅課、設定作息，仲有主題同會員。",
@@ -983,6 +989,8 @@
     "forum_offline": "The forum backend is being connected, posting is paused for now. Please come back later.",
     "home_forumTitle": "Anonymous Forum",
     "home_forumNote": "Post anonymously",
+    "forum_blocked": "Not available in your region",
+    "forum_backHome": "Back to home",
 
     "app_metaTitle": "MAX Timetable — Sumiger",
     "app_metaDesc": "MAX Timetable is a local timetable app for daily and weekly scheduling, routine settings, themes and membership.",
@@ -1891,6 +1899,8 @@
     "forum_offline": "掲示板のバックエンドを接続中です。今は投稿できません。後でもう一度お越しください。",
     "home_forumTitle": "匿名掲示板",
     "home_forumNote": "匿名で投稿",
+    "forum_blocked": "お住まいの地域ではご利用いただけません",
+    "forum_backHome": "ホームに戻る",
 
     "app_metaTitle": "MAX課程表 — Sumiger",
     "app_metaDesc": "MAX課程表は、毎日の授業と週の時間割、生活リズムの管理、テーマと会員機能を備えたローカル時間割ツールです。",
@@ -2203,6 +2213,8 @@
     "forum_offline": "토론방 백엔드를 연결하는 중입니다. 지금은 게시할 수 없습니다. 나중에 다시 방문해 주세요.",
     "home_forumTitle": "익명 토론방",
     "home_forumNote": "익명으로 게시",
+    "forum_blocked": "해당 지역에서는 이용할 수 없습니다",
+    "forum_backHome": "홈으로 돌아가기",
 
     "app_metaTitle": "MAX 시간표 — Sumiger",
     "app_metaDesc": "MAX 시간표는 일일 수업과 주간 시간표, 생활 리듬 관리, 테마와 회원 기능을 갖춘 로컬 시간표 도구입니다.",

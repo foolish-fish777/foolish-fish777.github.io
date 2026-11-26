@@ -85,6 +85,12 @@
         <p class="lede"><span data-i18n="forum_yourId">你的匿名编号是</span> <strong id="anon-name"></strong></p>
       </header>
 
+      <section aria-labelledby="gate-title" id="gate-blocked" hidden>
+        <h2 id="gate-title" data-i18n="forum_blocked">地区不适配</h2>
+        <p><a href="../" data-i18n="forum_backHome">返回首页</a></p>
+      </section>
+
+      <div id="forum-content">
       <section aria-labelledby="post-title">
         <h2 id="post-title" data-i18n="forum_postBtn">发帖</h2>
         <form class="post-form" id="post-form">
@@ -102,6 +108,7 @@
         <ul class="blocks" id="post-list"></ul>
         <p id="empty-note" data-i18n="forum_empty" hidden>还没有帖子，来发第一条吧。</p>
       </section>
+      </div>
     </article>
   </main>
   <footer class="site-footer">
@@ -112,6 +119,7 @@
     </div>
   </footer>
   <script src="/js/i18n.js" defer></script>
+  <script src="/js/geo.js" defer></script>
   <script src="forum.js" defer></script>
 </body>
 </html>

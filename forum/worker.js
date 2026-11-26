@@ -132,6 +132,14 @@ export default {
       return json(req, 200, { ok: true });
     }
 
+    if (req.method === "GET" && path === "/geo") {
+      // Cloudflare gives the visitor country as request.cf.country
+      // ("CF-IPCountry"). The frontend tries this first; if it is
+      // missing it falls back to the public trace endpoint.
+      const cf = req.cf || null;
+      return json(req, 200, { ok: true, country: (cf && cf.country) || null });
+    }
+
     if (req.method === "GET" && path === "/posts") {
       const limit = Math.min(Math.max(parseInt(url.searchParams.get("limit") || "50", 10) || 50, 1), 100);
       try {

@@ -61,12 +61,13 @@
         <h2 id="forum-title" data-i18n="home_forumTitle">匿名讨论区</h2>
         <ul class="index-list">
           <li>
-            <a href="forum/">
+            <a href="forum/" id="forum-link">
               <span class="item-title" data-i18n="home_forumTitle">匿名讨论区</span>
-              <span class="item-note" data-i18n="home_forumNote">匿名发帖</span>
+              <span class="item-note" id="forum-note" data-i18n="home_forumNote">匿名发帖</span>
             </a>
           </li>
         </ul>
+        <p class="gate-note" id="forum-gate-note" hidden></p>
       </section>
     </div>
   </main>
@@ -78,6 +79,7 @@
     </div>
   </footer>
   <script src="/js/i18n.js" defer></script>
+  <script src="/js/geo.js" defer></script>
   <script src="/js/visit.js" defer></script>
 </body>
 </html>

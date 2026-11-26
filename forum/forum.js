@@ -105,7 +105,8 @@
     }
   }
 
-  var listEl, statusEl, listStatusEl, emptyEl, formEl, textEl, btnEl, offlineEl;
+  var listEl, statusEl, listStatusEl, emptyEl, formEl, textEl, btnEl, offlineEl,
+    contentEl, gateEl;
 
   function api(path, opts) {
     return fetch(FORUM_API_BASE + path, opts);
@@ -215,17 +216,37 @@
     textEl = document.getElementById("post-text");
     btnEl = document.getElementById("post-btn");
     offlineEl = document.getElementById("offline-note");
+    contentEl = document.getElementById("forum-content");
+    gateEl = document.getElementById("gate-blocked");
     document.getElementById("anon-name").textContent = getAnonName();
     formEl.addEventListener("submit", onPost);
-    if (!FORUM_API_BASE) {
-      offlineEl.hidden = false;
-      textEl.disabled = true;
-      btnEl.disabled = true;
-      listStatusEl.hidden = true;
-      emptyEl.hidden = true;
-      return;
-    }
-    loadPosts();
+    /* Region gate first: hide the forum until the check allows it, so a
+       mainland visitor never sees the list and can never post — even by
+       opening /forum/ directly. A failed check (null) defaults to allow. */
+    contentEl.hidden = true;
+    textEl.disabled = true;
+    btnEl.disabled = true;
+    var geo = window.SumigerGeo;
+    var check = geo && geo.checkCountry
+      ? geo.checkCountry(FORUM_API_BASE)
+      : Promise.resolve(null);
+    check.then(function (country) {
+      if (country && geo.isMainland(country)) {
+        gateEl.hidden = false;
+        listStatusEl.hidden = true;
+        return;
+      }
+      contentEl.hidden = false;
+      if (!FORUM_API_BASE) {
+        offlineEl.hidden = false;
+        listStatusEl.hidden = true;
+        emptyEl.hidden = true;
+        return;
+      }
+      textEl.disabled = false;
+      btnEl.disabled = false;
+      loadPosts();
+    });
   }
 
   if (document.readyState === "loading") {

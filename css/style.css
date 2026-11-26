@@ -369,6 +369,26 @@ address {
   }
 }
 
+.gate-note {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.index-list a.locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.index-list a.locked .item-title::before {
+  content: "\1F512 ";
+}
+
+.index-list a.is-checking {
+  opacity: 0.75;
+  cursor: wait;
+}
+
 @media print {
   :root {
     --bg: #fff;

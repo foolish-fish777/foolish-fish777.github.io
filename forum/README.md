@@ -56,6 +56,17 @@ wrangler deploy
 推到网站仓库，等 GitHub Pages 发布后，打开 `https://sumiger.me/forum/` 发一条测试帖，
 确认出现在列表里，再用管理员口令删掉它。
 
+## 地区门控（只允许非中国大陆打开）
+
+- 判断依据是 IP 归属地国家码，不是浏览器语言/时区。
+- 顺序：先调后端 `GET /geo`（Worker 返回 `request.cf.country`），
+  拿不到再调 Cloudflare 公开接口 `https://www.cloudflare.com/cdn-cgi/trace`
+  读 `loc=` 行。两个都拿不到时**默认放行**，不误锁海外用户。
+- 中国大陆（CN）：主页按钮灰掉、带锁，点它只显示“地区不适配”，不跳转；
+  直接打开 `https://sumiger.me/forum/` 也显示“地区不适配”，不加载帖子、不允许发帖。
+- 澳门、香港、台湾、海外都算非大陆，正常进入。
+- 判断完成前按钮显示“检测中…”、不可点；结果在 sessionStorage 里缓存 10 分钟。
+
 ## 后端规则（v1，写在 worker.js 里）
 
 - 不用登录；发帖自动用浏览器里存的匿名编号，如“匿名用户123”。
