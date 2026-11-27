@@ -47,6 +47,7 @@
     "forum_offline": "讨论区后端正在接通中，暂时发不了帖子，稍后再来。",
     "home_forumTitle": "匿名讨论区",
     "home_forumNote": "匿名发帖",
+    "home_worldQuote": "“世界很大，我们很小。<br>我们都不过是世界的过客，<br>如同蜉蜍之于天地，<br>我们能做的，<br>就是在有限的时间里，<br>留下我们的痕迹，告诉世界我们来过”",
     "forum_blocked": "地区不适配",
     "forum_backHome": "返回首页",
 
@@ -361,6 +362,7 @@
     "forum_offline": "討論區後端正在接通中，暫時發不了帖子，稍後再來。",
     "home_forumTitle": "匿名討論區",
     "home_forumNote": "匿名發帖",
+    "home_worldQuote": "“世界很大，我們很小。<br>我們都不過是世界的過客，<br>如同蜉蜍之於天地，<br>我們能做的，<br>就是在有限的時間裡，<br>留下我們的痕跡，告訴世界我們來過”",
     "forum_blocked": "地區不適配",
     "forum_backHome": "返回首頁",
 
@@ -675,6 +677,7 @@
     "forum_offline": "討論區後端接緊線，暫時發唔到帖，遲啲再嚟。",
     "home_forumTitle": "匿名討論區",
     "home_forumNote": "匿名發帖",
+    "home_worldQuote": "“世界好大，我哋好細。<br>我哋都不過係世界嘅過客，<br>好似蜉蜍之於天地，<br>我哋可以做嘅，<br>就係喺有限嘅時間入面，<br>留低我哋嘅痕跡，話唻世界知我哋嚢過”",
     "forum_blocked": "地區唔適配",
     "forum_backHome": "返去首頁",
 
@@ -989,6 +992,7 @@
     "forum_offline": "The forum backend is being connected, posting is paused for now. Please come back later.",
     "home_forumTitle": "Anonymous Forum",
     "home_forumNote": "Post anonymously",
+    "home_worldQuote": "“The world is vast, and we are small.<br>We are all but passers-by in this world,<br>like mayflies against heaven and earth.<br>All we can do<br>is, in our limited time,<br>leave our mark, and tell the world we were here.”",
     "forum_blocked": "Not available in your region",
     "forum_backHome": "Back to home",
 
@@ -1289,6 +1293,7 @@
     "home_appNote": "本地课程表",
     "home_watanabeTitle": "渡边记账",
     "home_watanabeNote": "本地记账",
+    "home_worldQuote": "“世界老大的，我伲老小的。<br>我伲侊不过是世界个过客，<br>就好比蜉蜍之于天地，<br>我伲能做个，<br>就是勒有限个辰光里向，<br>留下我伲个痕迹，告诉世界我伲来过”",
 
     "app_metaTitle": "MAX课程表 — Sumiger",
     "app_metaDesc": "MAX课程表是个本地课程表工具，用来排每日搭仔每周个课、设置作息，搭仔主题搭仔会员。",
@@ -1587,6 +1592,7 @@
     "home_appNote": "本地课程表",
     "home_watanabeTitle": "渡边记账",
     "home_watanabeNote": "本地记账",
+    "home_worldQuote": "“世界大得很，我们小得很。<br>我们都不过是世界的一个过客，<br>跟蜉蜍在天地间一样，<br>我们能做的，<br>就是在有限的时间里，<br>留下我们的痕迹，告诉世界我们来过”",
 
     "app_metaTitle": "MAX课程表 — Sumiger",
     "app_metaDesc": "MAX课程表是个本地课程表工具，用来排每日跟每周的课、设置作息，还有主题跟会员。",
@@ -1899,6 +1905,7 @@
     "forum_offline": "掲示板のバックエンドを接続中です。今は投稿できません。後でもう一度お越しください。",
     "home_forumTitle": "匿名掲示板",
     "home_forumNote": "匿名で投稿",
+    "home_worldQuote": "「世界は広く、私たちは小さい。<br>私たちは皆、世界の旅人にすぎず、<br>天地における蜉蜍のようなもの。<br>私たちにできることは、<br>限られた時間の中で、<br>私たちの痕跡を残し、世界に私たちがここにいたことを伝えることだ。」",
     "forum_blocked": "お住まいの地域ではご利用いただけません",
     "forum_backHome": "ホームに戻る",
 
@@ -2213,6 +2220,7 @@
     "forum_offline": "토론방 백엔드를 연결하는 중입니다. 지금은 게시할 수 없습니다. 나중에 다시 방문해 주세요.",
     "home_forumTitle": "익명 토론방",
     "home_forumNote": "익명으로 게시",
+    "home_worldQuote": "“세상은 크고, 우리는 작다.<br>우리는 모두 세상의 나그네에 불과하고,<br>천지에 비하면 하루살이와 같다.<br>우리가 할 수 있는 일은,<br>한정된 시간 안에<br>우리의 흔적을 남겨, 세상에 우리가 다녀갔음을 알리는 것이다.”",
     "forum_blocked": "해당 지역에서는 이용할 수 없습니다",
     "forum_backHome": "홈으로 돌아가기",
 

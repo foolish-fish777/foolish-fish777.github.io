@@ -344,6 +344,30 @@ address {
   padding: 1.25rem 0 2.25rem;
 }
 
+.world-quote {
+  background:
+    linear-gradient(rgba(250, 247, 238, 0.62), rgba(250, 247, 238, 0.38)),
+    #efe7d3 url("../images/world-map-vintage.jpg") center 32% / cover no-repeat;
+  border-top: 1px solid #d8cbb2;
+  padding: 3.25rem 1rem 2.75rem;
+  margin-top: 1rem;
+}
+
+.world-quote-inner {
+  width: min(100% - 2rem, 40rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.world-quote-text {
+  margin: 0;
+  font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+  font-size: clamp(1.05rem, 0.95rem + 0.6vw, 1.3rem);
+  line-height: 2;
+  color: #4a3226;
+  text-shadow: 0 1px 0 rgba(250, 246, 236, 0.75);
+}
+
 .site-footer p {
   margin: 0.1rem 0;
 }
